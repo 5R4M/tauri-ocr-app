@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh auth *)",
+      "PowerShell(git config --global --list 2>&1)",
+      "PowerShell($cred = [System.Net.CredentialCache]::DefaultNetworkCredentials; cmdkey /list 2>&1 | Select-String -Pattern \"github\" -CaseSensitive:$false)"
+    ]
+  }
+}
