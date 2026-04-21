@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">tauri-ocr-app</string>
+    <string name="main_activity_title">tauri-ocr-app</string>
+</resources>
