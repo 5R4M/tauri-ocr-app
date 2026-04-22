@@ -135,7 +135,8 @@ export async function processImageOCR(
     const { data } = await worker.recognize(prepared);
     await worker.terminate();
 
-    const words: OcrWord[] = (data.words ?? []).map(w => ({
+    const rawWords: any[] = (data as any).words ?? [];
+    const words: OcrWord[] = rawWords.map(w => ({
       text: w.text,
       confidence: w.confidence,
       x0: w.bbox.x0, y0: w.bbox.y0,
